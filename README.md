@@ -3,12 +3,18 @@
 
 
 ;;; Задача 21
+
 ;;; Определите функцию, удаляющую первое вхождение данного элемента на верхнем уровне
 
 (defun  fv (lst n)   
- (cond
-    ((null lst) nil)
-    ((= (car lst) n) cdr lst)
-    (t (cons (car lst) (fv (cdr lst) n)))))
+
+(cond
+
+((null lst) nil)
+ 
+ ((= (car lst) n) cdr lst)
+ 
+ (t (cons (car lst) (fv (cdr lst) n)))))
+
 
 ; (fv '(1 2 3 4) 5)
